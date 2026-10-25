@@ -21,4 +21,48 @@ console.log(z);  // Output: 500
 // z = 600;  // This will throw an error because 'const' variables cannot be reassigned
 // console.log(z);  // This line will not be reached
 
+// Difference between 'var' and 'let'
+// 1. Demostrating the difference in declaration between 'var' and 'let'
+var d = 700;  // Using 'var' to declare a function-scoped variable
+var d = 800;  // Redeclaring the variable 'd' is allowed with 'var'
+console.log(d);  // Output: 800
+
+let e = 900;  // Using 'let' to declare a block-scoped variable
+// let e = 1000;  // This will throw an error because 'let' variables cannot be redeclared in the same scope
+console.log(e);  // Output: 900
+
+// 2. Demonstrating hoisting difference of 'var' and 'let'
+// 'var' declarations are hoisted to the top of their scope, but not their initializations
+// 'let' declarations are also hoisted, but they are not initialized until their definition is evaluated
+// This means that accessing a 'let' variable before its declaration will result in a ReferenceError
+console.log(f);  // This will output 'undefined' because 'f' is hoisted but not initialized yet
+var f = 1000;  // Using 'var' to declare a function-scoped variable
+
+// console.log(g);  // This will throw a ReferenceError because 'g' is not accessible before its declaration
+let g = 2000;  // Using 'let' to declare a block-scoped variable
+
+//3. Demonstrating scope differences between 'var' and 'let'
+// 'var' is function-scoped, while 'let' is block-scoped
+function testvarScope()
+{
+    if (true)
+    {
+        var f = 1000;
+        console.log(f);  // Output: 1000
+    }
+    f = 2000;  // 'f' is accessible here because 'var' is function-scoped
+    console.log(f);  // Output: 2000
+}
+testvarScope();  // Calling the function to demonstrate 'var' scope
+
+function testletScope()
+{
+    if (true)
+    {
+        let g = 3000;
+        console.log(g);  // Output: 3000
+    }
+    // g = 4000;  // 'g' is not accessible here because 'let' is block-scoped. This will throw an error if uncommented
+}
+testletScope();  // Calling the function to demonstrate 'let' scope
 

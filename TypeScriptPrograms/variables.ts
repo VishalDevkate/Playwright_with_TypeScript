@@ -7,14 +7,13 @@ console.log("a");    //this will print a but not the value of a
 let x = 100;  // Using 'let' to declare a block-scoped variable
 x = 200;  // Reassigning the value of x
 console.log(x);  // Output: 200
-x = "World";  // Reassigning x to a string value is allowed in TypeScript since 'let' allows dynamic typing
-console.log(x);  // Output: World
+//x = "World";  // compile time error because x is declared as a number type, but we are trying to assign a string value to it.
+//console.log(x);  
 
 var y = 300;  // Using 'var' to declare a function-scoped variable
 y = 400;
 console.log(y);  // Output: 400 
-y = "Hello";  // Reassigning y to a string value is allowed in TypeScript since 'var' allows dynamic typing
-console.log(y);  // Output: Hello 
+//y = "Hello";  // compile time error because y is declared as a number type, but we are trying to assign a string value to it.
 
 const z = 500;  // Using 'const' to declare a block-scoped constant variable
 console.log(z);  // Output: 500 

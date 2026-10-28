@@ -15,3 +15,4 @@ console.log("empID: ", empID, "salary: ", salary);
 let isBillable: boolean = true;
 //isBillable = "no" // Not allowed
 console.log("isBillable: ", isBillable);
+

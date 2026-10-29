@@ -33,7 +33,8 @@ console.log(e);  // Output: 900
 // 2. Demonstrating hoisting difference of 'var' and 'let'
 // 'var' declarations are hoisted to the top of their scope, but not their initializations
 // 'let' declarations are also hoisted, but they are not initialized until their definition is evaluated
-                //This will throw a error during compilation because 'f' is not accessible before its declaration
+console.log(f);  // This will throw a error during compilation because 'f' is used before assignment
+                  // will output undefined during runtime
 var f = 1000;  // Using 'var' to declare a function-scoped variable
 
 // console.log(g);  // This will throw a ReferenceError because 'g' is not accessible before its declaration

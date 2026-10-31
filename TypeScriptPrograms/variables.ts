@@ -16,7 +16,7 @@ console.log(y);  // Output: 400
 //y = "Hello";  // compile time error because y is declared as a number type, but we are trying to assign a string value to it.
 
 const z = 500;  // Using 'const' to declare a block-scoped constant variable
-console.log(z);  // Output: 500 
+console.log(z);  // Output: 500
 // z = 600;  // This will throw an error because 'const' variables cannot be reassigned
 // console.log(z);  // This line will not be reached
 
@@ -33,8 +33,8 @@ console.log(e);  // Output: 900
 // 2. Demonstrating hoisting difference of 'var' and 'let'
 // 'var' declarations are hoisted to the top of their scope, but not their initializations
 // 'let' declarations are also hoisted, but they are not initialized until their definition is evaluated
-console.log(f);  // This will throw a error during compilation because 'f' is used before assignment
-                  // will output undefined during runtime
+console.log(f);  // This will throw a error during compilation because 'f' is used before assignment (npx tsc --noEmit .\variables.ts)
+                  // will output undefined runtime  (npx tsx .\variables.ts)
 var f = 1000;  // Using 'var' to declare a function-scoped variable
 
 // console.log(g);  // This will throw a ReferenceError because 'g' is not accessible before its declaration
